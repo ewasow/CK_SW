@@ -1,0 +1,29 @@
+﻿<Window x:Class="RestMyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestMyApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.Row="0" Name="tbInputData" />
+        <Button Grid.Row="0" Grid.Column="1" Name="btnLoad" Click="btnLoad_Click">Load</Button>
+        <TabControl Grid.Row="1" Grid.ColumnSpan="2" Name="tc">
+            <TabItem Header="Raw Data">
+                <Grid>
+                    <TextBox Name="tbHtmlContent">aaaa</TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Parsed Data"></TabItem>
+        </TabControl>
+    </Grid>
+</Window>
